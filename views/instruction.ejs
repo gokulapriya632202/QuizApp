@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions - Quiz Maker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #0b0119;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .instructions-container {
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+        padding: 20px;
+        background: rgba(15, 2, 25, 0.95);
+        border: 3px solid rgb(23, 161, 216);
+        box-shadow: 0 0 15px rgb(23, 161, 216);
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: rgb(23, 161, 216);
+        text-shadow: 0 0 15px rgb(23, 161, 216);
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+
+      .btn-container {
+        margin-top: 20px;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: rgb(23, 161, 216);
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        box-shadow: 0 0 15px rgb(23, 161, 216);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="instructions-container">
+      <h1>Instructions</h1>
+      <ul>
+        <li>There are <strong>5 questions</strong> in this quiz.</li>
+        <li>
+          Each question has <strong>four options</strong>. Select the one you
+          think is correct.
+        </li>
+        <li>You cannot change your answer once you select it.</li>
+        <li>Your <strong>final score</strong> will be displayed at the end.</li>
+        <li>Click on the "Start Quiz" button below to begin.</li>
+      </ul>
+      <div class="btn-container">
+        <button onclick="goToStartQuiz()">Start Quiz</button>
+        <button onclick="goToHome()">Go Back to Home</button>
+      </div>
+    </div>
+
+    <script>
+      function goToStartQuiz() {
+        window.location.href = "/startquiz"; // Redirect to the quiz page
+      }
+
+      function goToHome() {
+        window.location.href = "/main"; // Redirect to the main.ejs page
+      }
+    </script>
+  </body>
+</html>

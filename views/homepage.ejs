@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("bgr.jpg") no-repeat center center/cover;
+        color: white;
+        text-align: center;
+      }
+      /* .navbar {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        font-size: 18px;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .navbar a:hover {
+        color: blue;
+      } */
+      .container {
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+      .btn {
+        display: inline-block;
+        margin: 10px;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        color: white;
+        background: orangered;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s;
+        text-decoration: n;
+      }
+      .btn:hover {
+        background: red;
+      }
+      .attribute {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Quiz App</h1>
+      <p>Test your knowledge and compete with others! Are you ready?</p>
+      <p>Please read the instructions carefully before starting the quiz.</p>
+      <button class="btn" onclick="goToStartQuiz()">Login</button>
+    </div>
+    <script>
+      function goToStartQuiz() {
+        window.location.href = "/login"; // Redirect to the quiz page
+      }
+    </script>
+  </body>
+</html>
