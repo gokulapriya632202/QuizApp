@@ -13,22 +13,20 @@ app.set("view engine", "ejs");
 
 // Serve static files
 app.use(express.static("public"));
-// Routes
-// Route for the homepage
-// Route for the homepage
+
 app.get("/", (req, res) => {
   res.render("homepage"); // Render the homepage.ejs file
 });
 
 // Route for the login page
-app.get("/login", (req, res) => {
-  res.render("login", { message: null }); // Render the login.ejs file
+app.get('/login', (req, res) => {
+  res.render('login', { message: 'This is your message!' });
 });
 
-// Route for the signup page
-app.get("/signup", (req, res) => {
-  res.render("signup", { message: null }); // Render the signup.ejs file
+app.get('/signup', (req, res) => {
+  res.render('signup', { message: 'Please sign up!' });
 });
+
 
 app.get("/startquiz", (req, res) => {
   res.render("startquiz");
@@ -45,6 +43,7 @@ app.get('/instruction', (req, res) => {
 app.get('/startquiz', (req, res) => {
   res.render('startquiz'); // Renders startquiz.ejs
 });
+
 
 
 app.post("/signup", async (req, res) => {

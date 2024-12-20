@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ MAKER APP</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #0b0119;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .quiz-container {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -80px;
+      }
+
+      .active {
+        display: flex;
+      }
+
+      .quiz-box {
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+        padding: 20px;
+        background: rgba(15, 2, 25, 0.95);
+        border: 3px solid rgb(23, 161, 216);
+        box-shadow: 0 0 15px rgb(23, 161, 216);
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: rgb(23, 161, 216);
+        text-shadow: 0 0 15px rgb(23, 161, 216);
+        font-size: 2rem;
+        padding-left: 45%;
+        padding-top: 100px;
+      }
+
+      #final {
+        color: rgb(23, 161, 216);
+        text-shadow: 0 0 15px rgb(23, 161, 216);
+        font-size: 2rem;
+        padding-left: 10px;
+      }
+
+      .question-box {
+        margin: 20px 0;
+        width: 800px;
+        padding: 25px;
+        border: 2px solid rgb(23, 161, 216);
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(23, 161, 216);
+        margin-top: -27%;
+        position: absolute;
+      }
+
+      .options {
+        margin: 20px 0;
+      }
+
+      .option {
+        margin: 10px 0;
+        padding: 10px;
+        border: 2px solid rgb(23, 161, 216);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: 0 0 10px rgb(23, 161, 216);
+      }
+
+      .option:hover {
+        box-shadow: 0 0 10px rgb(23, 161, 216);
+      }
+
+      .correct {
+        background-color: green;
+      }
+
+      .wrong {
+        background-color: red;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: rgb(23, 161, 216);
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        box-shadow: 0 0 15px rgb(23, 161, 216);
+      }
+
+      .result-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .result-box {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        padding: 20px;
+        background: rgba(15, 2, 25, 0.95);
+        border: 3px solid rgb(23, 161, 216);
+        box-shadow: 0 0 15px rgb(23, 161, 216);
+        border-radius: 10px;
+      }
+
+      .circle-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+      }
+
+      .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(
+          rgb(23, 161, 216) var(--progress),
+          #3a2a44 var(--progress)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .btn-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .btn-container button {
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: rgb(23, 161, 216);
+        border: none;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .quiz-container {
+        background-color: #000;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px #00bfff;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #00bfff;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1>Question</h1>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
